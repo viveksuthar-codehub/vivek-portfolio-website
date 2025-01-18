@@ -1,0 +1,10 @@
+var Vivek = (Age>10) ? "Vivek is Older" : "Vivek is Younger";
+
+if (Age>10)
+{
+    document.Write("Vivek is Older");
+}
+else
+{
+    document.Write("Vivek is Younger");
+}

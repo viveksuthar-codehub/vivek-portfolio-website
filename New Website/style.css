@@ -1,0 +1,362 @@
+/* Brand Color */
+/* color: rgb(0, 136, 255); */
+/* color: rgb(200, 200, 200); */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+    cursor: none;
+}
+
+body {
+    background-color: rgb(24, 24, 24);
+    cursor: none;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+}
+
+/* Cursor Animation */
+.cursor {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 100ms ease-in-out;
+}
+
+.outer {
+    border: 2px solid #fcfcfc90;
+    /* border: 2px solid #f7f7f770; */
+}
+
+.inner {
+    background: #fcfcfc40;
+    transition: 200ms ease-out;
+}
+
+.cursor.hover {
+    transform: translate(-50%, -50%) scale(2.5);
+    border: 1px solid #f7f7f770;
+    transition: transform 200ms ease-in-out;
+}
+
+.inner.hover {
+    /* border: 1px solid #f7f7f770; */
+    background: #f7f7f7;
+    mix-blend-mode: difference;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li,
+a,
+button {
+    cursor: none;
+    font-family: 'Carmen Sans Medium';
+    /* font-weight: 500; */
+    font-size: 16px;
+    color: rgb(244, 244, 244);
+    text-decoration: none;
+}
+
+/* Navigation Bar */
+.WebLogo{
+    width: 140px;
+    margin-top: 20px;
+}
+
+.NavButtons {
+    list-style: none;
+}
+
+.NavButtons li {
+    display: inline-block;
+    padding: 0px 18px;
+    transition: all 0.3s ease 0s;
+}
+
+.NavButtons li:hover {
+    transform: translate(0, -5px);
+}
+
+a {
+    width: max-content;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+}
+
+.Logo {
+    cursor: none;
+    font-family: 'Carmen Sans Heavy';
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+}
+
+.Logo span {
+    font-family: 'Carmen Sans ExtraBold';
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 5px;
+    color: rgb(167, 167, 167);
+    /* color: rgb(0, 136, 255); */
+}
+
+/* IntroContainer */
+.IntroContainer {
+    background-color: black;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url("Fusn Studios Website BG.png");
+    /* background-image: url("Fusn Studios Website BG.png"); */
+    background-size: cover;
+    padding: 250px 100px;
+    color: white;
+    display: inline-flex;
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 0px 0px 40px 40px;
+}
+
+.VerticalLine {
+    background-color: white;
+    width: 2px;
+    height: 165px;
+    margin: 0 30px 0 0;
+}
+
+.IntroDetails {
+    vertical-align: middle;
+}
+
+.IntroStart {
+    font-family: 'Carmen Sans Medium';
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.IntroName {
+    font-family: 'Carmen Sans ExtraBold';
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: rgb(0, 136, 255);
+}
+
+.Profession1 {
+    font-family: 'Carmen Sans Light';
+    font-weight: 100;
+    font-size: 30px;
+    margin-top: 20px;
+    line-height: 1;
+}
+
+.Span1 {
+    font-size: 22px;
+    margin-left: 4px;
+    color: #c4c4c4;
+}
+
+.Span2 {
+    font-size: 18px;
+    margin-left: 12px;
+    color: #aaaaaa;
+}
+
+/* About Container */
+.HeadingTitles h2 {
+    text-align: center;
+    font-family: 'Carmen Sans ExtraBold';
+    color: white;
+    font-size: 40px;
+    padding: 80px 0 0 0;
+}
+
+.HeadingTitles h6 {
+    text-align: center;
+    font-family: 'Carmen Sans UltraLight';
+    /* color: rgb(0, 136, 255); */
+    color: rgb(200, 200, 200);
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.AboutContainer {
+    margin: 0 70px;
+}
+
+.AboutSection {
+    color: white;
+    display: inline-flex;
+    margin: 100px 0;
+}
+
+.AboutSubSection {
+    display: block;
+    margin: 10px 70px 10px 0;
+    padding-right: 70px;
+}
+
+/* Hello I am text */
+.AboutDetails {
+    margin: 0 0 70px 0;
+}
+
+.AboutDetails h4 {
+    font-family: 'Carmen Sans ExtraBold';
+    color: rgb(0, 136, 255);
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.AboutDetails p {
+    font-family: 'Carmen Sans Medium';
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Experience Section */
+.ExperienceSection h3 {
+    text-align: center;
+    font-family: 'Carmen Sans Medium';
+    color: rgb(0, 136, 255);
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.ExperienceSection h6 {
+    text-align: center;
+    font-family: 'Carmen Sans UltraLight';
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    margin: 5px 0 22px 0;
+}
+
+/* Image Section */
+.ImageSection img {
+    width: 350px;
+    margin: 0 30px 0 0;
+    border: solid 5px white;
+}
+
+/* Qualification Section */
+.QualificationContainer{
+    padding: 0 70px;
+    display: block;
+    background-color: rgb(30, 30, 30);
+}
+.QualificationDetails{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 70px 0 100px;
+}
+.WorkExperience, .Education{
+    display: block;
+    color: white;
+    width: 45%;
+    align-items: center;
+}
+.QualificationDetails h2 {
+    font-family: 'Carmen Sans ExtraBold';
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(210, 210, 210);
+    margin-bottom: 10px;
+}
+.QualificationDetails h4 {
+    font-family: 'Carmen Sans Medium';
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(0, 136, 255);
+    margin: 30px 0 10px;
+}
+.QualificationDetails p{
+    font-family: 'Carmen Sans Light';
+    font-size: 15px;
+    margin: 0 0 20px 0;
+}
+
+.ServicesSection{
+    display: block;
+}
+.ServicesContainer{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 0 70px;
+    margin: 70px 0 100px;
+}
+.ServicesCard{
+    display: block;
+    min-width: 200px;
+    max-width: 300px;
+    background-color: rgb(36, 36, 36);
+    text-align: center;
+    border-radius: 10px;
+}
+.ServicesCard img{
+    width: 65px;
+    margin: 50px 0 20px;
+}
+.ServicesCard h3{
+    font-family: 'Carmen Sans ExtraBold';
+    font-size: 22px;
+    color: rgb(190, 190, 190);
+}
+.ServicesCard hr{
+    width: 70px;
+    margin: 10px auto;
+}
+.ServicesCard p{
+    font-family: 'Carmen Sans Medium';
+    color: white;
+    font-size: 12px;
+    margin: 40px 30px 20px;
+}
+.ServicesCard button {
+    font-size: 14px;
+    padding: 7px 14px;
+    border: solid 2px;
+    border-radius: 12px;
+    border-color: rgb(0, 136, 255);
+    background-color: transparent;
+    transition: all 0.15s ease 0s;
+    margin: 0 0 40px;
+}
+.ServicesCard button:hover {
+    transition: all 0.3s ease 0s;
+    border: 1;
+    border-radius: 0px;
+    background-color: rgba(0, 136, 255, 1);
+    border-color: rgba(0, 0, 0, 0);
+}

@@ -1,0 +1,447 @@
+/* Brand Color */
+/* color: rgb(0, 136, 255); */
+/* color: rgb(200, 200, 200); */
+:root {
+    --bg-color: #010208;
+    --main-font-color: #ffffff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+.syne-heading {
+    color: var(--main-font-color);
+    font-family: "Syne", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.syne-subheading {
+    color: var(--main-font-color);
+    font-family: "Syne", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.syne-body {
+    color: var(--main-font-color);
+    font-family: "Syne", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+    cursor: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: url(Img/Blur\ BG.png), url(Img/Blur\ BG\ 2.png), url(Img/Blur\ BG\ 3.png);
+    background-repeat: no-repeat;
+    background-position:
+        top,
+        center,
+        bottom;
+    cursor: none;
+    overflow-x: hidden;
+    color: var(--main-font-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li,
+a,
+button {
+    cursor: none;
+    /* font-family: 'Carmen Sans Medium'; */
+    /* font-weight: 500; */
+    /* font-size: 16px; */
+    color: var(--main-font-color);
+    text-decoration: none;
+}
+
+/* Cursor Animation.................. */
+.cursor {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 100ms ease-in-out;
+}
+
+.outer {
+    border: 2px solid #ffffff90;
+    /* border: 2px solid #f7f7f770; */
+    mix-blend-mode: difference;
+    z-index: 1000;
+}
+
+.inner {
+    background: #ffffff40;
+    transition: 200ms ease-out;
+    z-index: 1000;
+}
+
+.cursor.hover {
+    transform: translate(-50%, -50%) scale(2.5);
+    border: 1px solid var(--bg-color);
+    transition: transform 200ms ease-in-out;
+}
+
+.inner.hover {
+    /* border: 1px solid #f7f7f770; */
+    background: #ffffff;
+    mix-blend-mode: difference;
+}
+
+
+/* Buttons.................. */
+.BorderButton {
+    font-family: "Syne", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    background: none;
+    padding: 8px 24px;
+    border-radius: 24px;
+    border: 1px solid var(--main-font-color);
+    color: var(--main-font-color);
+    transition: all 0.2s ease 0s;
+}
+
+.BorderButton:hover {
+    background: var(--main-font-color);
+    border-radius: 0px;
+    border: 1px solid var(--main-font-color);
+    color: var(--bg-color);
+    transition: all 0.3s ease 0s;
+}
+
+.FillButton {
+    font-family: "Syne", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    background: var(--main-font-color);
+    padding: 8px 24px;
+    border-radius: 24px;
+    border: 1px solid var(--main-font-color);
+    color: var(--bg-color);
+    transition: all 0.2s ease 0s;
+}
+
+.FillButton:hover {
+    background: none;
+    border-radius: 0px;
+    border: 1px solid var(--main-font-color);
+    color: var(--main-font-color);
+    transition: all 0.3s ease 0s;
+}
+
+.SectionLinks {
+    color: var(--bg-color);
+    color: var(--main-font-color);
+    font-family: "Syne", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Buttons..................END */
+
+
+/* Navigation Bar.................. */
+header {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 100px;
+}
+
+.WebLogo {
+    width: 120px;
+    margin-top: 0px;
+}
+
+.NavButtons {
+    list-style: none;
+}
+
+.NavButtons li {
+    display: inline-block;
+    padding: 0px 18px;
+    transition: all 0.3s ease 0s;
+}
+
+.NavButtons li:hover {
+    transform: translate(0, -5px);
+}
+
+.NavLinks {
+    width: max-content;
+    position: relative;
+}
+
+.NavLinks::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: var(--main-font-color);
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+.NavLinks:hover::after {
+    transform: scaleX(1);
+}
+
+
+.Logo {
+    cursor: none;
+    /* font-family: 'Carmen Sans Heavy';
+    font-weight: 500;
+    font-size: 16px;
+    color: white; */
+}
+
+
+/* IntroSection.................. */
+.IntroSection {
+    width: 100%;
+    display: block;
+    padding: 176px 100px;
+    align-items: center;
+    text-align: center;
+}
+
+.IntroText {
+    font-size: 3rem;
+    margin-bottom: 176px;
+}
+
+.IntroBody {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.AboutDescription {
+    width: 500px;
+    text-align: left;
+}
+
+
+.SectionTitleContainer {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.SectionTitle {
+    font-size: 40px;
+}
+
+/* Expertise Section.................. */
+.ExpertiseSection {
+    width: 100%;
+    padding: 64px 100px;
+}
+
+.ExpertiseContainer {
+    width: 100%;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 3 equal columns */
+    grid-template-rows: auto;
+}
+
+.ExpertiseData {
+    margin: 0px 64px 64px 0px;
+}
+
+.DataHeading {
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+/* Expertise Section..................END*/
+
+
+/* Works Section..................*/
+.WorksSection {
+    width: 100%;
+    padding: 64px 100px;
+    /* background-image: url(Img/Blur\ BG.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y; */
+    /* background: linear-gradient(135deg, #001722, #002707); */
+    /* Adjusts the size of the image */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.WorksCard {
+    /* width: 100%; */
+    height: 493px;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 32px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    backdrop-filter: blur(20px);
+    /* Blurs the background behind the card */
+    box-shadow: 0 0px 60px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Adds a frosted border */
+    margin-bottom: 20px;
+}
+
+.WorksImage {
+    width: 50%;
+    border-radius: 24px;
+}
+
+.WorkDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-align: left;
+    margin: 0px 64px 0px 32px;
+}
+
+.DescriptionUpper h2 {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.DescriptionUpper p {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.SoftwaresUsed {
+    display: inline-flex;
+}
+
+.SoftwaresUsed h6 {
+    font-family: "Syne", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    margin: 12px 8px 0px 0px;
+    border: 1px solid var(--main-font-color);
+    border-radius: 24px;
+    padding: 8px 24px;
+}
+/* Works Section..................END*/
+
+/* Experience Section..................*/
+.ExperienceSection {
+    width: 100%;
+    padding: 64px 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.ExperienceCard{
+    margin: 28px 0px 16px;
+}
+.ExperienceDetails{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 12px 0px;
+}
+.ExperienceDetails h2{
+    font-size: 28px;
+}
+.ExperienceDetails h4{
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+.ExperienceDetails h6{
+    font-size: 16px;
+}
+.ExperienceSubDetails{
+    text-align: right;
+}
+.ExperienceCardLine{
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+/* Experience Section..................END*/
+
+/* Blog Section..................*/
+.BlogSection {
+    width: 100%;
+    padding: 64px 100px;
+    text-align: center;
+}
+.BlogCard{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    height: 100%;
+    margin: 12px 0px;
+}
+.BlogCardImage img{
+    width: 286px;
+}
+.BlogDescription{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-align: left;
+    margin: auto 32px;
+}
+.BlogDescription p, h3, h6{
+    margin: 10px 0px;
+}
+.BlogSoftwaresUsed {
+    display: inline-flex;
+}
+.BlogSoftwaresUsed h6 {
+    font-family: "Syne", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    margin-right: 8px;
+    border: 1px solid var(--main-font-color);
+    border-radius: 24px;
+    padding: 8px 24px;
+}
+.BlogButton{
+    margin: auto;
+}
+/* Blog Section..................END*/

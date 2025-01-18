@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fusn Studios</title>
+</head>
+
+<body>
+    <header>
+        <div class="Logo">
+            <img src="Img/Version 1.png" alt="FUSN Studios" class="WebLogo">
+        </div>
+        <div>
+            <nav class="NavButtons">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="IntroContainer">
+
+        <div class="VerticalLine"></div>
+
+        <div class="IntroDetails">
+            <h4 class="IntroStart">Hello, I am</h4>
+            <h1 class="IntroName">Vivek Suthar.</h1>
+            <h1 class="Profession1">Video Editor, <span class="Span1">Graphic Designer,</span><span class="Span2">Web
+                    Developer.</span></h1>
+            <!-- <h1 class="Profession2">Graphics Designer</h1>
+            <h1 class="Profession3">Web Developer</h1> -->
+        </div>
+    </div>
+
+    <!-- Cursor Code -->
+    <div class="cursor outer"></div>
+    <div class="cursor inner"></div>
+
+    <div class="AboutContainer">
+        <div class="HeadingTitles">
+            <h2>About Me</h2>
+            <h6>Get to Know the Face Behind the Website</h6>
+        </div>
+
+        <div class="AboutSection">
+            <div class="AboutSubSection">
+                <div class="AboutDetails">
+                    <h4>I am,</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eligendi veniam soluta officiis tempore explicabo quis unde iste. Commodi delectus eius distinctio nemo molestiae, fugiat ut! Repellendus dicta ea reprehenderit?</p>
+                </div>
+                <div class="ExperienceSection">
+                    <h3>3</h3>
+                    <h6>Years Of Experience</h6>
+                    <h3>300+</h3>
+                    <h6>Projects Completed</h6>
+                    <h3>00+</h3>
+                    <h6>Placeholder</h6>
+                </div>
+            </div>
+            <div class="ImageSection">
+                <img src="Img/Vivek Photo.webp" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="QualificationContainer">
+        <div class="HeadingTitles">
+            <h2>Qualification</h2>
+            <h6>Where Knowledge Meets Experience</h6>
+        </div>
+        <div class="QualificationDetails">
+            <div class="WorkExperience">
+                <h2>Work Experience</h2>
+                <div class="WorkDetails">
+                    <h4>Work Experience 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <hr>
+                </div>
+                <div class="WorkDetails">
+                    <h4>Work Experience 2</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <hr>
+                </div>
+                <div class="WorkDetails">
+                    <h4>Work Experience 3</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+            <div class="Education">
+                <h2>Education</h2>
+                <div class="EducationDetails">
+                    <h4>Education 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <hr>
+                </div>
+                <div class="EducationDetails">
+                    <h4>Education 2</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <hr>
+                </div>
+                <div class="EducationDetails">
+                    <h4>Education 3</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ServicesSection">
+        <div class="HeadingTitles">
+            <h2>Services</h2>
+            <h6>Empowering You with Our Offerings</h6>
+        </div>
+        <div class="ServicesContainer">
+            <div class="ServicesCard">
+                <img src="Icons/VFX.webp" alt="">
+                <h3>VFX</h3>
+                <hr>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                <button>Know More</button>
+            </div>
+            <div class="ServicesCard">
+                <img src="Icons/GFX.webp" alt="">
+                <h3>GFX</h3>
+                <hr>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                <button>Know More</button>
+            </div>
+            <div class="ServicesCard">
+                <img src="Icons/Web Development.webp" alt="">
+                <h3>Web Dev</h3>
+                <hr>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                <button>Know More</button>
+            </div>
+            <div class="ServicesCard">
+                <img src="Icons/Game Development.webp" alt="">
+                <h3>Game Dev</h3>
+                <hr>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                <button>Know More</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    const cursor = document.querySelectorAll(".cursor");
+    const links = document.querySelectorAll("a");
+    const ButtonOP = document.querySelectorAll("#mybutton");
+
+    window.addEventListener("mousemove", (e) => {
+
+        let x = e.pageX;
+        let y = e.pageY;
+
+        cursor.forEach(el => {
+            el.style.left = `${x}px`;
+            el.style.top = `${y}px`;
+
+            links.forEach(a => {
+                a.addEventListener("mouseenter", () => {
+                    el.classList.add("hover");
+                })
+                a.addEventListener("mouseleave", () => {
+                    el.classList.remove("hover");
+                })
+            })
+            ButtonOP.forEach(mybutton => {
+                mybutton.addEventListener("mouseenter", () => {
+                    el.classList.add("hover");
+                })
+                mybutton.addEventListener("mouseleave", () => {
+                    el.classList.remove("hover");
+                })
+            })
+        })
+    })
+</script>
+
+</html>
